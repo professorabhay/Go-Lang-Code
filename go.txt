@@ -1,0 +1,7 @@
+ Very Fast Language (Execution and complie both)
+ Execution lang - JS, python, ruby, php
+ Compile lang - Rust, C, C++, Go
+ VM Lang - Java, C#
+ Go lang code directly to machine code (natively complied lang)
+ use much less memory from java, c#
+ Building Textio project also!!
