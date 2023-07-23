@@ -5,3 +5,24 @@
  Go lang code directly to machine code (natively complied lang)
  use much less memory from java, c#
  Building Textio project also!!
+
+ Compile and Compilation  - 
+ Compilation is the process of compile the code.
+
+ In go, we can share a os dependent file like after main.go -> go build main.go -> main.exe . 
+ This command create a executable file as per the base operating system.
+
+ Go is garbage collected lang like java but nothing like java jvm 
+
+ Data Types - 
+ bool, string, int, int8, int16, int32, int64
+ uint, uint8, uint16, uint32, uint64, uintptr
+ byte //alias for uint8
+ rune //alias for int32, represent unicode code point
+
+float32, float64
+complex64, complex128
+
+short variable declaration using := short assignment can be used in place os a var declaration.
+
+Eg- empty := "" instad of var empty string
