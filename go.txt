@@ -8,6 +8,10 @@
 
  Compile and Compilation  - 
  Compilation is the process of compile the code.
+ go mod init ("Filename") => it create go.mod file 
+ It contains all dependencies required by our program along with their versions
+ go run main.go
+ It run the file
 
  In go, we can share a os dependent file like after main.go -> go build main.go -> main.exe . 
  This command create a executable file as per the base operating system.
