@@ -30,3 +30,32 @@ complex64, complex128
 short variable declaration using := short assignment can be used in place os a var declaration.
 
 Eg- empty := "" instad of var empty string
+
+
+We can also build .go for any other os from any os 
+For this - Terminal > GOOS="linux" go build
+
+auto memory allocation  || memory allocation
+2 ways - new() , make()
+
+new() -> 
+1- Allocate memory but not init 
+2- you wil get a memory address
+3- zeroed storage
+
+make() ->
+1- Allocate memory and init
+2- you wil get a memory address
+3- non-zeroed storage
+
+GC happens automaticallly - (garbage collector) [https://pkg.go.dev/runtime]
+out of scope or nil
+
+GOSC variable use to set the initial gc percentage
+
+POINTERS - 
+Pointers are variables that hold addresses instead of values directly stored at those locations.
+They allow us to indirect access data structures through pointers rather than direct access which makes them more flexible
+
+go work use myTime   
+PS D:\courses\New folder\Go-Lang Code> go work use pointers

@@ -46,7 +46,6 @@ func verifyTextio(){
 
 	// reader := bufio.NewReader(os.Stdin)
 	// fmt.Println("Enter your name: ")
-
 	//Comma Ok Syntax || error ok
 
 	// input, _ := reader.ReadString(('\n'))
@@ -70,5 +69,3 @@ func verifyTextio(){
 		fmt.Println("Added 1 to your rating: ", numRating+1)
 	}
 }
-
-
