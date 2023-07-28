@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func structs() {
 	fmt.Println("Welcome to Structs")
 
 	// no inheritance in goLang and also No super or parent

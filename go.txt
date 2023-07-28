@@ -59,3 +59,13 @@ They allow us to indirect access data structures through pointers rather than di
 
 go work use myTime   
 PS D:\courses\New folder\Go-Lang Code> go work use pointers
+
+
+// Defer Statements
+// A defer statement defers the execution of a function until the surrounding function returns.
+// The deferred call's arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.
+// Deferred function calls are pushed onto a stack. When a function returns, its deferred calls are executed in last-in-first-out order.
+// The arguments passed to it will be executed after the return is done.
+// A defer statement pushes a function call onto a list. The list of saved calls is executed after the surrounding function returns.
+// Defer is commonly used to simplify functions that perform various clean-up actions.
+// A defer statement defers the execution of a function until the surrounding function returns.
