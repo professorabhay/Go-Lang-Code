@@ -8,7 +8,7 @@ import (
 
 const url = "https://lco.dev"
 
-func main() {
+func Requests() {
 	fmt.Println("Welcome to Web-Requests in GoLang") // Simple One 
 
 	response, err := http.Get(url)
