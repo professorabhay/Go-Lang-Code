@@ -1,5 +1,7 @@
 package main
 
+// also known as hashmaps or dictionaries in other languages
+
 import "fmt"
 
 func maps() {
@@ -17,12 +19,12 @@ func maps() {
 	fmt.Println(languages)
 
 
-	// loops are interseting in go lang [For Loop] ->
+	// loops are interesting in go lang [For Loop] ->
 	for key, value := range languages {
 		fmt.Printf("For key %s, value is %s\n", key, value)
 	}
 
-	// comma Ok sysntax for same loop ->
+	// comma Ok syntax for same loop ->
 	for _, value := range languages{
 		fmt.Printf("For key s, value is  %s\n", value)
 	}

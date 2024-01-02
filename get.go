@@ -2,14 +2,14 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"strings"
 )
 
 func main() {
 	fmt.Println("Hello, World!")
-	PerformGetRequest()
+	// PerformGetRequest()
 }
 
 func PerformGetRequest(){
@@ -28,11 +28,26 @@ func PerformGetRequest(){
 	fmt.Println("Content Length: ", response.ContentLength)
 
 	var responseString strings.Builder
-	content, _ := ioutil.ReadAll(response.Body)
+	content, _ := io.ReadAll(response.Body)
 	byteCount, _ := responseString.Write(content)
 
 	fmt.Println("Byte Count: ", byteCount)
 	fmt.Println("Response Body: ", responseString.String())
 
 	// fmt.Println(string(content))
+}
+
+func PerformPostJsonRequest(){
+
+	requestBody := strings.NewReader(`{"name":"John Doe","occupation":"gardener"}`)
+
+	response, err := http.Post("http://localhost:8000/post", "application/json", requestBody)
+
+	if err != nil {
+		panic(err)
+	} 
+
+	defer response.Body.Close()
+	content, _ := io.ReadAll(response.Body)
+	fmt.Println(string(content))
 }

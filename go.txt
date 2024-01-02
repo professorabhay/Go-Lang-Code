@@ -29,11 +29,12 @@ complex64, complex128
 
 short variable declaration using := short assignment can be used in place os a var declaration.
 
-Eg- empty := "" instad of var empty string
+Eg- empty := "" instad of var empty string // walrus operator
 
 
 We can also build .go for any other os from any os 
 For this - Terminal > GOOS="linux" go build
+GOOS="windows" go build
 
 auto memory allocation  || memory allocation
 2 ways - new() , make()
@@ -46,7 +47,7 @@ new() ->
 make() ->
 1- Allocate memory and init
 2- you wil get a memory address
-3- non-zeroed storage
+3- non-zeroed storage // put any data initialy 
 
 GC happens automaticallly - (garbage collector) [https://pkg.go.dev/runtime]
 out of scope or nil
@@ -69,3 +70,6 @@ PS D:\courses\New folder\Go-Lang Code> go work use pointers
 // A defer statement pushes a function call onto a list. The list of saved calls is executed after the surrounding function returns.
 // Defer is commonly used to simplify functions that perform various clean-up actions.
 // A defer statement defers the execution of a function until the surrounding function returns.
+
+
+First letter capital in variable name means that it can be access from anywhere. Something like public variables

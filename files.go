@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 )
 
@@ -30,7 +29,7 @@ func Files() {
 }
 
 func readFile(filename string){
-	databyte , err := ioutil.ReadFile(filename)
+	databyte , err := os.ReadFile(filename)
 	checkErr(err)
 
 	fmt.Println(string(databyte))

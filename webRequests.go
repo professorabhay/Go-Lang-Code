@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 )
 
@@ -21,7 +21,7 @@ func Requests() {
 	
 	fmt.Printf("Response us of type %T\n", response)
 
-	datatypes, err := ioutil.ReadAll(response.Body)
+	datatypes, err := io.ReadAll(response.Body)
 	if err != nil{
 		panic(err)
 	}
