@@ -73,3 +73,6 @@ PS D:\courses\New folder\Go-Lang Code> go work use pointers
 
 
 First letter capital in variable name means that it can be access from anywhere. Something like public variables
+
+
+https://github.com/hiteshchoudhary/golang/

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 	"strings"
 )
 
@@ -37,17 +38,49 @@ func PerformGetRequest(){
 	// fmt.Println(string(content))
 }
 
-func PerformPostJsonRequest(){
+func PerformPostJsonRequest() {
+	const myurl = "http://localhost:8000/post"
 
-	requestBody := strings.NewReader(`{"name":"John Doe","occupation":"gardener"}`)
+	//fake json payload
 
-	response, err := http.Post("http://localhost:8000/post", "application/json", requestBody)
+	requestBody := strings.NewReader(`
+		{
+			"coursename":"Let's go with golang",
+			"price": 0,
+			"platform":"learnCodeOnline.in"
+		}
+	`)
+
+	response, err := http.Post(myurl, "application/json", requestBody)
 
 	if err != nil {
 		panic(err)
-	} 
+	}
+	defer response.Body.Close()
+
+	content, _ := io.ReadAll(response.Body)
+
+	fmt.Println(string(content))
+}
+
+func PerformPostFormRequest() {
+	const myurl = "http://localhost:8000/postform"
+
+	//formdata
+
+	data := url.Values{}
+	data.Add("firstname", "abhay")
+	data.Add("lastname", "porwal")
+	data.Add("email", "abhay@go.dev")
+
+	response, err := http.PostForm(myurl, data)
+	if err != nil {
+		panic(err)
+	}
 
 	defer response.Body.Close()
+
 	content, _ := io.ReadAll(response.Body)
 	fmt.Println(string(content))
+
 }
