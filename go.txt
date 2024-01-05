@@ -76,3 +76,18 @@ First letter capital in variable name means that it can be access from anywhere.
 
 
 https://github.com/hiteshchoudhary/golang/
+
+
+Concurrency vs Parallelism in Go
+
+Concurrency -> Doing one task at a Time but you can do multiple task at a time 
+Parallelism -> Doing all task together at a time
+
+Goroutines - 
+
+Managed by go runtime and flexible stack - 2kb
+
+thread is managed by OS and with fixed stack - 1Mb
+
+Do not communicate by sharing memory,
+instad share memory by communicating.
